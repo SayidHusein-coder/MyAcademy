@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Log | MyAcademy</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+  <script src="attendance.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">MY</span><span class="brand-name">MyAcademy</span></div>
+      <div class="nav-label">Menu</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="home.html"><span class="nav-icon">⌂</span><span>Home</span></a>
+        <a class="active" href="attendance.html"><span class="nav-icon">✓</span><span>Attendance Log</span></a>
+        <a href="agenda.html"><span class="nav-icon">☷</span><span>Agenda</span></a>
+        <a href="profile.html"><span class="nav-icon">◉</span><span>Profile</span></a>
+        <a href="settings.html"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">Attendance</p><h1>Attendance Log</h1></div>
+        <div class="profile-chip"><span class="avatar" data-profile-avatar>FB</span><span data-profile-name>Fathir Benzhema</span></div>
+      </header>
+      <section class="attendance-log-page">
+        <div class="card filter-card">
+          <h3>Filter Data</h3>
+          <div class="filter-grid">
+            <label>Start Date<input type="date" data-start-date></label>
+            <label>End Date<input type="date" data-end-date></label>
+            <label>Status<select data-status-filter><option>All Statuses</option><option>Present</option><option>Not Checked In</option></select></label>
+            <button class="apply-filter" type="button" data-apply-filter>Apply Filter</button>
+          </div>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-card present"><span>Present</span><strong data-summary-present>0</strong></div>
+          <div class="summary-card sick"><span>Sick</span><strong>0</strong></div>
+          <div class="summary-card permit"><span>Permit</span><strong>0</strong></div>
+          <div class="summary-card alpha"><span>Alpha</span><strong>0</strong></div>
+          <div class="summary-card duty"><span>On Duty</span><strong>0</strong></div>
+        </div>
+        <div class="card log-table-card"><div class="log-table-wrap"><table class="log-table">
+          <thead><tr><th>Day</th><th>Date</th><th>Check-in</th><th>Check-out</th><th>Status</th></tr></thead>
+          <tbody data-attendance-rows></tbody>
+        </table></div></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

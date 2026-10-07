@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyAcademy</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<header>
+
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    .center {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .menu {
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: fit-content;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 32px;
+      color: white;
+      font-weight: 900;
+      padding: 15px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #menu {
+      display: none;
+    }
+
+    .logo label {
+      display: none;
+    }
+
+    .items {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      width: 100px;
+      padding: 10px 18px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5mm;
+      font-family: poppins;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .item:hover {
+      box-shadow: inset 2px 2px 10px #bcbcbc, inset -2px -2px -10px #ffffff, 2px 2px 10px #bcbcbc, -2px -2px -10px #ffffff
+    }
+
+    @media screen and (max-width: 650px) {
+      .menu {
+        flex-direction: column;
+      }
+
+      .menu .logo {
+        width: 100%;
+      }
+
+      .menu .logo label {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 30px;
+      }
+
+      .menu .logo label::before {
+        position: absolute;
+        content: "menu";
+        font-family: "Material Icons";
+        top: 0;
+        left: 0;
+        font-size: 30px;
+      }
+
+      .menu .items {
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+      }
+
+      .menu .item {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+        border-top: 0.5mm solid transparent;
+      }
+
+      #menu:checked~.items {
+        max-height: 500px;
+      }
+
+      #menu:checked~.logo label::before {
+        content: "close";
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+    <div class="center">
+      <div class="menu">
+        <input type="checkbox" name="" id="menu" />
+        <div class="logo">
+          MyAcademy
+          <label for="menu"></label>
+        </div>
+
+ 
+        </div>
+        <button class="login-trigger" type="button">Masuk</button>
+      </div>
+    </div>
+  </body>
+
+</html>
+
+<div class="intro">
+  <h1 class="judul">Say Hello to MyAcademy</h1>
+  <button class="button1" id="trialButton" type="button">Coba Gratis →</button>
+
+</div>
+
+</header>
+
+<body>
+
+  <br>
+
+  <h3 class="makna">Say Hello To MyAcademy</h3>
+  <p class="makna-p">MyAcademy adalah platform pembelajaran online yang menyediakan berbagai kursus dan materi
+    pendidikan untuk
+    membantu Anda mengembangkan keterampilan dan pengetahuan Anda. Dengan MyAcademy, Anda dapat belajar kapan saja
+    dan di mana saja, sesuai dengan kecepatan dan kenyamanan Anda sendiri.</p>
+  </br>
+  <div>
+
+  </div>
+  <div class="auth-modal" id="authModal" aria-hidden="true">
+    <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="close-modal" id="closeModal" type="button" aria-label="Tutup">&times;</button>
+      <div class="auth-heading">
+        <span class="auth-badge">MYC</span>
+        <h2 id="authTitle">Mulai belajar bersama MyAcademy</h2>
+        <p id="authSubtitle">Daftar gratis dan nikmati pengalaman belajar yang lebih terarah.</p>
+      </div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Autentikasi">
+        <button class="auth-tab active" id="registerTab" type="button" role="tab" aria-selected="true">Daftar</button>
+        <button class="auth-tab" id="loginTab" type="button" role="tab" aria-selected="false">Masuk</button>
+      </div>
+
+      <form class="auth-form active" id="registerForm">
+        <label for="registerName">Nama lengkap</label>
+        <input id="registerName" name="name" type="text" placeholder="Masukkan nama lengkap" required>
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" name="email" type="email" placeholder="nama@email.com" required>
+        <label for="registerPassword">Kata sandi</label>
+        <input id="registerPassword" name="password" type="password" placeholder="Minimal 6 karakter" minlength="6"
+          required>
+
+        <button class="auth-submit" type="submit">Buat akun gratis</button>
+
+      </form>
+
+
+      <form class="auth-form" id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" placeholder="nama@email.com" required>
+        <label for="loginPassword">Kata sandi</label>
+        <input id="loginPassword" name="password" type="password" placeholder="Masukkan kata sandi" required>
+        <button class="auth-submit" type="submit">Masuk ke akun</button>
+      </form>
+      <p class="auth-message" id="authMessage" role="status" aria-live="polite">
+        Data pendaftaran akan disimpan dengan aman.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-circle">MYC</div>
+            <div class="logo-text">MyAcademy</div>
+          </div>
+          <p class="brand-tagline">Web Yang Berinovasi Dalam Pendidikan</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Informasi</h3>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#benefits">Keunggulan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Ikuti Kami</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/scarmousche/" target="_blank" class="social-icon"
+              title="Instagram">IG</a>
+            <a href="https://wa.me/6281231945288?text=Halo%20kak%2C%20mau%20tanya%20dong" target="_blank" class="social-icon"
+              title="Whatsapp">WA</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p>© 2026 MyAcademy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="database.js"></script>
+</body>
+
+</html>
+
+
+
+<!--ngomong nang kene
+Husein : izin kompe fokus nang guru
+Alvi   : 
+Benzy  : seng ga penting menurutmu hapusen
+-->

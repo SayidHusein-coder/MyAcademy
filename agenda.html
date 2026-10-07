@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | MyAcademy</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+  <script src="agenda.js" defer></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">MY</span><span class="brand-name">MyAcademy</span></div>
+      <div class="nav-label">Menu</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="home.html"><span class="nav-icon">⌂</span><span>Home</span></a>
+        <a href="attendance.html"><span class="nav-icon">✓</span><span>Attendance Log</span></a>
+        <a class="active" href="agenda.html"><span class="nav-icon">☷</span><span>Agenda</span></a>
+        <a href="profile.html"><span class="nav-icon">◉</span><span>Profile</span></a>
+        <a href="settings.html"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Schedule</p>
+          <h1>Agenda</h1>
+        </div>
+        <div class="profile-chip"><span class="avatar" data-profile-avatar>FB</span><span data-profile-name>Fathir
+            Benzhema</span></div>
+      </header>
+      <section class="agenda-page">
+        <div class="card agenda-card">
+          <div class="agenda-heading">
+            <button class="agenda-arrow" type="button" aria-label="Previous month" data-agenda-prev>‹</button>
+            <h2 data-agenda-title>September 2026</h2>
+            <button class="agenda-arrow" type="button" aria-label="Next month" data-agenda-next>›</button>
+          </div>
+          <div class="agenda-weekdays" data-agenda-weekdays></div>
+          <div class="agenda-grid" data-agenda-grid></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

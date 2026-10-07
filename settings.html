@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | MyAcademy</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+  <script src="settings.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">MY</span><span class="brand-name">MyAcademy</span></div>
+      <div class="nav-label">Menu</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="home.html"><span class="nav-icon">⌂</span><span>Home</span></a>
+        <a href="attendance.html"><span class="nav-icon">✓</span><span>Attendance Log</span></a>
+        <a href="agenda.html"><span class="nav-icon">☷</span><span>Agenda</span></a>
+        <a href="profile.html"><span class="nav-icon">◉</span><span>Profile</span></a>
+        <a class="active" href="settings.html"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">Account</p><h1>Settings</h1></div>
+        <div class="profile-chip"><span class="avatar" data-profile-avatar>FB</span><span data-profile-name>Fathir Benzhema</span></div>
+      </header>
+      <section class="settings-page">
+        <div class="card settings-card">
+          <p class="eyebrow">Security</p>
+          <h2>Ganti Password</h2>
+          <form class="profile-form" data-password-form>
+            <label for="current-password">Password saat ini</label>
+            <input id="current-password" type="password" minlength="6" required data-current-password>
+            <label for="new-password">Password baru</label>
+            <input id="new-password" type="password" minlength="6" required data-new-password>
+            <label for="confirm-password">Konfirmasi password baru</label>
+            <input id="confirm-password" type="password" minlength="6" required data-confirm-password>
+            <button class="apply-filter" type="submit">Simpan Password</button>
+            <p class="profile-message" data-password-message aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="card logout-card">
+          <p class="eyebrow">Session</p>
+          <h2>Logout</h2>
+          <p>Keluar dari sesi MyAcademy di perangkat ini.</p>
+          <button class="logout-button" type="button" data-logout>Logout</button>
+          <p class="profile-message" data-logout-message aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

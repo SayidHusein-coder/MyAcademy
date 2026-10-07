@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | MyAcademy</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+  <script src="profile.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">MY</span><span class="brand-name">MyAcademy</span></div>
+      <div class="nav-label">Menu</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="home.html"><span class="nav-icon">⌂</span><span>Home</span></a>
+        <a href="attendance.html"><span class="nav-icon">✓</span><span>Attendance Log</span></a>
+        <a href="agenda.html"><span class="nav-icon">☷</span><span>Agenda</span></a>
+        <a class="active" href="profile.html"><span class="nav-icon">◉</span><span>Profile</span></a>
+        <a href="settings.html"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">Account</p><h1>Profile</h1></div>
+        <div class="profile-chip"><span class="avatar" data-profile-avatar>FB</span><span data-profile-name>Fathir Benzhema</span></div>
+      </header>
+      <section class="profile-page">
+        <div class="card profile-card">
+          <div class="profile-large-avatar avatar" data-profile-avatar>FB</div>
+          <div>
+            <p class="eyebrow">Personal information</p>
+            <h2>Informasi Profil</h2>
+            <form class="profile-form" data-profile-form>
+              <label for="profile-nickname">Nama panggilan</label>
+              <input id="profile-nickname" type="text" maxlength="40" required data-profile-nickname>
+              <label for="profile-full-name">Nama lengkap</label>
+              <input id="profile-full-name" type="text" maxlength="80" required data-profile-full-name>
+              <label for="profile-class">Kelas</label>
+              <input id="profile-class" type="text" maxlength="40" placeholder="Contoh: XII RPL 1" data-profile-class>
+              <label for="profile-goal">Cita-cita</label>
+              <input id="profile-goal" type="text" maxlength="80" placeholder="Contoh: Software Engineer" data-profile-goal>
+              <label for="profile-email">Gmail</label>
+              <input id="profile-email" type="email" maxlength="120" placeholder="nama@gmail.com" required data-profile-email>
+              <button class="apply-filter" type="submit">Simpan Profil</button>
+              <p class="profile-message" data-profile-message aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+        <div class="card profile-details" data-profile-details>
+          <h2>Detail Profil</h2>
+          <p><strong>Nama panggilan</strong><span data-detail-nickname>-</span></p>
+          <p><strong>Nama lengkap</strong><span data-detail-full-name>-</span></p>
+          <p><strong>Kelas</strong><span data-detail-class>-</span></p>
+          <p><strong>Cita-cita</strong><span data-detail-goal>-</span></p>
+          <p><strong>Gmail</strong><span data-detail-email>-</span></p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

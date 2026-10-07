@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyAcademy Dashboard</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <button class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">MY</span><span class="brand-name">MyAcademy</span></div>
+      <div class="nav-label">Menu</div>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="#home"><span class="nav-icon">⌂</span><span>Home</span></a>
+        <a href="attendance.html"><span class="nav-icon">✓</span><span>Attendance Log</span></a>
+        <a href="agenda.html"><span class="nav-icon">☷</span><span>Agenda</span></a>
+        <a href="profile.html"><span class="nav-icon">◉</span><span>Profile</span></a>
+        <a href="settings.html"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+    </aside>
+
+    <main class="main" id="home">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Learning space</p>
+          <h1>Welcome back, <span data-profile-name>Fathir Benzhema</span>!</h1>
+        </div>
+        <div class="top-actions">
+          <button class="notification" type="button" aria-label="Notifications">♢</button>
+          <div class="profile-chip"><span class="avatar" data-profile-avatar>FB</span><span data-profile-name>Fathir Benzhema</span></div>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <section class="main-content">
+          <article class="card attendance-hero" id="attendance">
+            <div>
+              <p class="hero-label">Attendance Status</p>
+              <h2 data-current-status>Not Checked In</h2>
+              <p class="hero-copy" data-check-in-message aria-live="polite">Check in when you are ready to start your day.</p>
+              <button class="check-in check-in-button" type="button" data-check-in><span class="check-icon">✓</span><span>Mark Present</span></button>
+            </div>
+            <div class="hero-illustration" aria-hidden="true">✓</div>
+          </article>
+
+          <article class="card calendar-card">
+            <div class="card-heading"><div><p class="eyebrow">Attendance overview</p><h2 id="calendar-title">January 2026</h2></div><div class="calendar-actions"><button type="button" aria-label="Previous month" data-calendar-prev>‹</button><button type="button" aria-label="Next month" data-calendar-next>›</button></div></div>
+            <div class="year-calendar" data-calendar></div>
+            <div class="legend">
+              <span><i class="dot present"></i>Present</span><span><i class="dot permit"></i>Permit</span><span><i class="dot sick"></i>Sick</span><span><i class="dot duty"></i>On Duty</span><span><i class="dot leave"></i>On Leave</span><span><i class="dot alpha"></i>Alpha</span><span><i class="dot holiday"></i>Holiday</span><span><i class="dot unchecked"></i>Not Checked In</span>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
